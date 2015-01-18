@@ -1,0 +1,49 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :அமைப்பின்பெயர் %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :இணையதளம் %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :மின்னஞ்சல்முகவரி %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :ஒருங்கிணைப்பாளர்பெயர் %><br>
+    <%= f.text_field :coordname %>
+  </div>
+  <div class="field">
+    <%= f.label :தொலைபேசிஎண் %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :தற்காலிகமுகவரி %><br>
+    <%= f.text_area :taddress %>
+  </div>
+  <div class="field">
+    <%= f.label :நிரந்தரமுகவரி %><br>
+    <%= f.text_area :paddress %>
+  </div>
+  <div class="field">
+    <%= f.label :செயல்பாடுகள் %><br>
+    <%= f.text_area :activity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

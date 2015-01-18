@@ -1,0 +1,45 @@
+<center><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>அமைப்பின் பெயர் :</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>இணையதளம் :</strong>
+  <%= @group.website %>
+</p>
+
+<p>
+  <strong>மின்னஞ்சல் முகவரி :</strong>
+  <%= @group.email %>
+</p>
+
+<p>
+  <strong>ஒருங்கிணைப்பாளர் பெயர் :</strong>
+  <%= @group.coordname %>
+</p>
+
+<p>
+  <strong>தொலைபேசி எண் :</strong>
+  <%= @group.phone %>
+</p>
+
+<p>
+  <strong>தற்காலிக முகவரி :</strong>
+  <%= @group.taddress %>
+</p>
+
+<p>
+  <strong>நிரந்தர முகவரி :</strong>
+  <%= @group.paddress %>
+</p>
+
+<p>
+  <strong>செயல்பாடுகள்  :</strong>
+  <%= @group.activity %>
+</p>
+
+<%= link_to 'தொகு', edit_group_path(@group) %> |
+<%= link_to 'பின்', groups_path %>
+</center>

@@ -1,0 +1,34 @@
+<center><table class="table">
+  <thead>
+    <tr><h1>
+      <th>அமைப்பின் பெயர் </th>
+      <th>இணையதளம் </th>
+      <th>மின்னஞ்சல் முகவரி </th>
+      <th>ஒருங்கிணைப்பாளர் பெயர் </th>
+      <th>தொலைப்பேசி எண் </th>
+      <th>தற்காலிக முகவரி </th>
+      <th>நிரந்தர முகவரி </th>
+      <th>செயல்பாடுகள்  </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+        <td><%= group.website %></td>
+        <td><%= group.email %></td>
+        <td><%= group.coordname %></td>
+        <td><%= group.phone %></td>
+        <td><%= group.taddress %></td>
+        <td><%= group.paddress %></td>
+        <td><%= group.activity %></td>
+        <td><%= link_to 'பதிவுகளை காண்பி ', group %></td>
+        <td><%= link_to 'தொகு', edit_group_path(group) %></td>
+        <td><%= link_to 'அழிக்க', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</center>
